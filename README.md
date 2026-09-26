@@ -47,7 +47,7 @@ uvicorn main:app --reload --port 8000
 ```bash
 cd apps/api
 npm install
-npm run dev  # Runs on http://localhost:4000
+npm run dev  # Runs on http://localhost:8080
 ```
 
 ### 4. Start the Frontend (Next.js)

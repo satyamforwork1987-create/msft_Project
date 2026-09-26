@@ -9,7 +9,7 @@ import random
 import datetime
 from pathlib import Path
 
-random.seed(42)
+random.seed(69420)
 
 CATEGORIES = {
     'Revenue': {'min': 2000, 'max': 25000, 'freq': 0.25, 'typical_positive': True},
@@ -92,5 +92,5 @@ def write_csv(transactions: list, output_path: str = 'demo_transactions.csv'):
 
 
 if __name__ == '__main__':
-    txns = generate_transactions(months=6)
+    txns = generate_transactions(months=12)
     write_csv(txns)

@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  api:
+    build: 
+      context: ./apps/api
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network  # This must be indented under 'api'
+
+  web:
+    build: 
+      context: ./apps/web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    networks:
+      - app-network  # This must be indented under 'web'
+
+# This global networks block must be flush with the left margin (no indentation)
+networks:
+  app-network:
+    driver: bridge
